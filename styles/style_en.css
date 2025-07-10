@@ -214,7 +214,7 @@ nav {
 
 .about-content {
   color: #000;
-  font-family: 'MiSans', 'Montserrat', 'Noto Sans SC', Arial, sans-serif;
+  font-family: "Noto Sans SC", "Noto Sans SC Placeholder", sans-serif;
   font-weight: 300;
   font-size: clamp(14px, 1.2vw, 20px);
   line-height: 2;
@@ -248,7 +248,7 @@ nav {
 
 .founder-desc {
   color: #000;
-  font-family: 'MiSans', 'Montserrat', 'Noto Sans SC', Arial, sans-serif;
+  font-family: "Noto Sans SC", "Noto Sans SC Placeholder", sans-serif;
   font-weight: 300;
   font-size: clamp(14px, 1.2vw, 20px);
   line-height: 2;
@@ -268,7 +268,7 @@ nav {
 
 .founder-bio {
   color: #000;
-  font-family: 'MiSans', 'Montserrat', 'Noto Sans SC', Arial, sans-serif;
+  font-family: "Noto Sans SC", "Noto Sans SC Placeholder", sans-serif;
   font-weight: 300;
   font-size: clamp(14px, 1.2vw, 20px);
   line-height: 2;
