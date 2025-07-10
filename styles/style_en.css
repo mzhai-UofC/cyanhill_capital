@@ -889,7 +889,7 @@ nav {
   .about-content,
   .founder-desc,
   .founder-bio {
-    font-size: clamp(11px, 2.5vw, 12px);
+    font-size: clamp(10px, 2.5vw, 12px);
     line-height: 1.6;
   }
 
@@ -1104,7 +1104,7 @@ nav {
     }
 
     .brand-title {
-        font-size: 12px;
+        font-size: 10px;
         font-weight: 600;
         opacity: 0.92;
         margin-bottom: 0;
@@ -1115,7 +1115,7 @@ nav {
 
     .brand-desc,
     .brand-info p {
-        font-size: 10px;
+        font-size: 6px;
         opacity: 0.6;
         font-weight: 400;
         color: #222;
