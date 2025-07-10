@@ -293,13 +293,14 @@ nav {
 .brands-section {
   background: #EBECEC;
   width: 100%;
-  min-height: 100vh;
-  max-height: 100vh;
+  height: 100vh;
+  /* 避免超出整屏，限制为一屏高度 */
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
+  overflow: hidden; /* 防止内容溢出 */
 }
 
 /* 容器，居中对齐 */
