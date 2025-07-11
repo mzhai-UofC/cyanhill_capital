@@ -1366,16 +1366,17 @@ nav {
       justify-content: flex-start; /* 靠上显示 */
     }
 
-    .contact-title {
-        font-size: 12px;
-        margin-bottom: 4px;
+      .contact-title {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 10px;
         text-align: left;
         align-self: flex-start;
     }
 
     .contact-content {
         font-size: 8px;
-        line-height: 1.2;
+        line-height: 1.8;
         letter-spacing: 0;
         text-align: left;
         word-break: break-word;
