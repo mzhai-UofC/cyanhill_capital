@@ -1155,7 +1155,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: clamp(5vh, 15vh, 20vh);
+    margin-bottom: clamp(5vh, 10vh, 15vh);
     /* 保证与下方 .contact-info-wrapper 不重叠 */
     
   }
