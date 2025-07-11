@@ -35,8 +35,4 @@ function updateBrandImages() {
   });
 }
 
-// 页面加载和窗口变化时切换品牌图片
-window.addEventListener('DOMContentLoaded', updateBrandImages);
-window.addEventListener('resize', updateBrandImages);
 
-// ...existing code...

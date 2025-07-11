@@ -473,7 +473,7 @@ nav {
     width: 100vw;
     min-height: 100vh;
     max-height: 100vh;
-    padding: 7%;
+    padding: 4% 7% 7% 7%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -498,7 +498,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5vh; /* 保证与下方内容有间距 */
+   margin-bottom: clamp(5vh, 15vh, 20vh);
 }
 
 .contact-main-img {
@@ -513,14 +513,13 @@ nav {
 
 .contact-info-wrapper {
   width: 100%;
-  min-height: 30vh;
+  min-height: 20vh;
+  max-height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 2vw;
   position: static; /* 不要用 absolute，避免重叠 */
-  padding-left: 7%;
-  padding-right: 7%;
   box-sizing: border-box;
   margin-top: 0;
 }
@@ -535,65 +534,62 @@ nav {
 }
 
 .contact-columns {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    gap: 2vw;
+  display: grid;
+  grid-template-columns: 1fr 4.5fr 1.1fr;
+  width: 100%;
+  gap: 2vw;
+  align-items: flex-start;
 }
-
-.contact-col-email,
-.contact-col-info,
-.contact-col-qr {
-    flex: 1 1 0;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    opacity: 0.9;
-}
-
 .contact-col-email {
-    min-width: 120px;
+  grid-column: 1;
 }
-
 .contact-col-info {
-    margin-left: 32px;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
-
 .contact-col-qr {
-    min-width: 120px;
-    justify-content: flex-start;
-    align-items: flex-end;
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 0;
+  min-width: 100px;
+  margin-top: 0;
+  /* 让二维码与内容顶部对齐 */
 }
 
 .contact-title {
-    height: 20px;
-    color: #000;
-    font-family: 'Inter', 'Montserrat', Arial, sans-serif;
-    font-size: 19px;
-    font-weight: 700;
-    margin-bottom: 12px;
+  height: 20px;
+  color: #000;
+  font-family: "Montserrat", "Noto Sans SC", "Inter", Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 2.5vh;
 }
 
 .contact-content {
-    width: 100%;
-    color: #000;
-    font-family: 'MiSans', 'Montserrat', 'Noto Sans SC', Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 150%;
-    opacity: 0.9;
-    text-align: left;
-    word-break: break-word;
+  width: 100%;
+  color: #000;
+  font-family: "Montserrat", "Noto Sans SC", "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 150%;
+  opacity: 0.9;
+  text-align: left;
+  word-break: break-word;
+  align-self: flex-start;
 }
 
 .contact-qr-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 12px;
-    object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-top: 0;
+  align-self: flex-end;
 }
 
 .contact-gradient {
@@ -601,11 +597,11 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 440px;
+    height: 25vh;
     width: 100%;
     z-index: 10;
     pointer-events: none;
-    background: linear-gradient(180deg, rgba(0, 94, 50, 0) 10%, rgba(0, 94, 50, 0.65) 100%);
+    background: linear-gradient(180deg, rgba(0, 94, 50, 0) 10%, rgba(57, 138, 118, 0.65) 100%);
 }
 
 .modal-overlay {
@@ -1156,7 +1152,7 @@ nav {
 
     .contact-main-img-wrapper {
       width: 100%;
-      min-height: 50vh;
+      min-height: 60vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1206,88 +1202,87 @@ nav {
         position: relative;
     }
 
-    .contact-columns {
-        display: grid;
-        grid-template-columns: 25% 50% 25%;
-        width: calc(100vw - 80px);
-        
-        margin: 0 auto;
-        z-index: 4;
-        position: relative;
-        gap: 24px;
-        padding-bottom: 32px;
-        box-sizing: border-box;
-        align-items: start;
-    }
+     .contact-columns {
+    display: grid;
+    grid-template-columns: 25% 42% 33%;
+    width: calc(100vw - 80px);
+    margin: 0 auto;
+    z-index: 4;
+    position: relative;
+    gap: 24px;
+    padding-bottom: 32px;
+    box-sizing: border-box;
+    align-items: start;
+  }
 
-    .contact-col-email,
-    .contact-col-info {
-        flex: 1 1 0;
-        min-width: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        opacity: 0.9;
-        font-size: 13px;
-    }
+  .contact-col-email,
+  .contact-col-info {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    opacity: 0.9;
+    font-size: 13px;
+  }
 
-    .contact-col-email {
-       
-        grid-column: 1;
-    }
+  .contact-col-email {
+    grid-column: 1;
+  }
 
-    .contact-col-info {
-        
-        width: 100%;
-        grid-column: 2;
-    }
+  .contact-col-info {
+    width: 100%;
+    grid-column: 2;
+  }
 
-    .contact-col-qr {
-        flex: 0 0 100px;
-        min-width: 100px;
-        align-items: flex-start;
-        justify-content: flex-start;
-        display: flex;
-        flex-direction: column;
-        margin-right: 60px;
-        gap: 8px;
-        opacity: 0.9;
-    }
+  .contact-col-qr {
+    flex: 0 0 100px;
+    min-width: 100px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0; /* 修改为0，去除右侧间距 */
+    gap: 8px;
+    opacity: 0.9;
+    grid-column: 3;
+  }
 
-    .contact-title {
-        height: 20px;
-        align-self: stretch;
-        color: #000;
-        font-family: 'Inter', 'Montserrat', Arial, sans-serif;
-        font-size: 15px;
-        font-weight: 700;
-        line-height: normal;
-        letter-spacing: 0;
-        margin-bottom: 8px;
-    }
+  .contact-title {
+    height: 20px;
+    align-self: stretch;
+    color: #000;
+    font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0;
+    margin-bottom: 8px;
+  }
 
-    .contact-content {
-        width: 100%;
-        color: #000;
-        font-family: 'MiSans', 'Montserrat', 'Noto Sans SC', Arial, sans-serif;
-        font-size: 10px;
-        font-weight: 500;
-        line-height: 1.7;
-        letter-spacing: 0;
-        opacity: 0.9;
-        text-align: left;
-        word-break: break-word;
-    }
+  .contact-content {
+    width: 100%;
+    color: #000;
+    font-family: 'MiSans', 'Montserrat', 'Noto Sans SC', Arial, sans-serif;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 0;
+    opacity: 0.9;
+    text-align: left;
+    word-break: break-word;
+  }
 
-    .contact-qr-img {
-        width: 100px;
-        height: 100px;
-        border-radius: 10px;
-        margin-top: 8px;
-        background: transparent;
-        object-fit: cover;
-    }
+  .contact-qr-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 8px;
+    background: transparent;
+    object-fit: cover;
+    align-self: flex-start; /* 保证二维码左对齐 */
+  }
 }
 
 @media (max-width: 809px) {
